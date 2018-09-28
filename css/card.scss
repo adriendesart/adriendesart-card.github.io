@@ -1,0 +1,178 @@
+body {
+    /*page sizing*/
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 0;
+    /*color and font*/
+    background-color: grey;
+    font-family:'Times New Roman', Times, serif;
+    /*alignment*/
+    display: flex;
+    justify-content: center;
+}
+main {
+    /*element sizing*/
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid black;
+    /*animation*/
+    &:hover { 
+        img {
+            transform: scale(1.2);
+            filter: opacity(50%);
+         }
+        .move {
+            transform: translateY(-100px);
+        }
+        
+    }
+}
+.picture {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    background-color: white;
+    
+    img {
+        width: 400px;
+        transition: transform 2s;
+    }
+    .time {
+        /*size*/
+        margin: 0;
+        padding: 5px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        /*position*/
+            /*text*/
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /*box*/
+            position: absolute;
+            top: 10px;
+            left: 300px;
+        /*color*/
+        background-color: darkred;
+        p {
+            margin:0;
+            padding: 1px;
+            font-weight: 700;
+            color: white;
+        }
+    }
+}
+.move {
+    transition: transform 2s;
+    height: 100px;
+    .title {
+        /*size*/
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100px;
+        /*postion*/ 
+        /*text*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        /*box*/
+        position: relative;
+        /*color*/
+        background-color: white;
+        h1 {
+            color: black;
+            margin: 0px;
+            margin-left:10px;
+            padding: 0;
+        }
+        h2 {
+            color: darkred;
+            margin:0;
+            margin-left: 10px;
+            padding: 0;
+        }
+        .redbox {
+            /*size*/
+            margin: 0;
+            padding: 0;
+            width:(1/5)*100%;
+            height: 25px;
+            /*postion*/
+                /*text*/
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /*box*/
+                position: absolute;
+                top:-15px;
+                left:0px;
+            /*color*/
+            background-color: darkred;
+            p {
+                margin: 0;
+                padding: 0;
+                font-weight: 700;
+                color: white;
+            }
+        }
+    }
+    
+    .text {
+         /*size*/
+         margin: 0;
+         padding: 0;
+         width: 100%;
+         height: 100px;
+         /*postion*/ 
+         /*text*/
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-content: center;
+         /*box*/
+         position: absolute;
+         /*color*/
+         background-color: white;
+         p {
+             text-align: justify;
+             margin: 10px;
+         }
+    }
+}
+.foot {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    color: grey;
+    position: relative;
+    #clock::before{
+        content:url(../img/clock.svg);
+        display:inline-block;
+        width: 1em;
+        padding-right: 5px;
+    }
+    #comments::before{
+        content:url(../img/comments.svg);
+        display: inline-block;
+        width: 1em;
+        padding-right: 5px;
+    }
+    #clock:hover {
+        color: darkred;
+    }
+    #comments:hover {
+        color: darkred;
+    }
+}
